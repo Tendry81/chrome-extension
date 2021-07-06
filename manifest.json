@@ -1,0 +1,60 @@
+{
+    "name":"screen capture",
+    "version":"0.5",
+    "manifest_version":2,
+    "applications":{
+        "gecko":{
+            "id":"screen_capture@bytendry.ca"
+        }
+    },
+    "author":"Rijaniaina Tendry",
+    "description":"Browser screenshot extension developped by Tendry, latest version v0.5",
+    "browser_action":{
+        "default_icon":{
+            "16":"icons/icon16.png",
+            "32":"icons/icon32.png",
+            "38":"icons/icon38.png",
+            "512":"icons/icon512.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "38": "icons/icon38.png",
+        "512": "icons/icon512.png"
+    },
+    "background":{
+        "scripts":[             
+            "background/setting.js",
+            "background/listener.js",
+            "background/selectLoader.js",
+            "background/background.js"
+        ],
+        "persistent":true
+    },
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["listener.js","build/content.js","build/html2canvas.min.js","build/jspdf.min.js"],
+            "all_frames":true
+        }        
+    ],
+    "permissions":[
+        "<all_urls>","tabs","activeTab","contextMenus","webNavigation","downloads"
+    ],
+    "web_accessible_resources":[
+        "icons/menu-fullpage.svg",
+        "icons/menu-visible.svg",
+        "icons/icon_exit.png",
+        "icons/print.png",
+        "icons/download.png",
+        "icons/copy.svg",
+        "icons/texture.png",
+        "ui.html","ui.css",
+        "selector/UI_Builder.js",
+        "selector/UI_BuilderEvents.js",
+        "selector/selectors.js",
+        "selector/preview.js",        
+        "selector/print.js"        
+    ]
+}

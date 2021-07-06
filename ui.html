@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+</head>
+<body>
+    <div class="capture-controls">
+        <div class="controls-group"  id="preselect-controls">
+            <button id="exit">
+                <img src="" alt="">
+            </button>
+            <div class="left-side" style="margin-left:auto">
+                <button id="capture-full" title="Capture full page">
+                    <img src="" alt="">
+                </button>
+                <button id="capture-visible" title="Capture visible content">
+                    <img src="" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="controls-group" id="preview-controls">
+            <button id="exit">
+                <img src="" alt="">
+            </button>
+            <div class="print-format">
+                <div class="label">
+                    <label for="">Default format</label>
+                </div>                
+                <div class="format-list">
+                    <input type="radio" name="type" value="jpeg" id="jpeg"><label for="jpeg">Jpeg</label>
+                    <input type="radio" name="type" value="png" id="png" checked><label for="png">Png</label>
+                    <input type="radio" name="type" value="bmp" id="bmp"><label for="bmp">Bmp</label>
+                    <input type="radio" name="type" value="tiff" id="tiff"><label for="tiff">tiff</label>
+                    <input type="radio" name="type" value="pdf" id="pdf"><label for="pdf">Pdf</label>
+                </div>
+            </div>
+            <div class="left-side" style="margin-left:auto">
+                <button id="clipbroad">
+                    <img src="" alt="">
+                </button>
+                <button id="print">
+                    <img src="" alt="">
+                </button>
+                <button id="donwload">
+                    <img src="" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="screen-capture-preselect">
+        <div id="preselect-higlight"></div>
+    </div>
+    <div class="screen-capture-select">
+        <div id="select-higlight"></div>
+    </div>
+    <div class="screen-capture-preview">        
+        <div id="preview-higlight">
+
+            <div class="higlight-cover left"></div>
+            <div class="higlight-cover top"></div>
+            <div class="higlight-cover right"></div>
+            <div class="higlight-cover bottom"></div>
+
+            <div class="higlight-crop">
+
+                <div class="crop-lt"></div>
+                <div class="crop-lc"></div>
+                <div class="crop-lb"></div>
+
+                <div class="crop-ct"></div>
+                <div class="crop-rt"></div>
+                <div class="crop-rc"></div>
+
+                <div class="crop-rb"></div>
+                <div class="crop-cb"></div>
+            </div>
+        </div>
+    </div>
+    <div class="screen-capture-print" style="display:none">
+        <img src="" alt="image">
+    </div>
+</body>
+</html>
